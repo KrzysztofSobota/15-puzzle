@@ -1,80 +1,89 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>15-tka</title>
+  <title>15-puzzle</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="15_puzzle.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:200,400" rel="stylesheet">  
 </head>
 <body>
   <div class="container">
-   <h1>15-tka</h1>
-   <h2>
-     <section>
-       <p>Rules:</p>
-         <ul>1</ul>
-         <ul>2</ul>
-         <ul>3</ul>
-     </section><br>
-     <p>Play the game and have a lot of fun!!</p><br>
-    </h2>
-    <div class="board">
-      <div class="square">
-        <input type="button" id="btn1" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn2" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn3" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn4" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn5" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn6" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn7" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn8" class="butt" value="?">
-      </div>
-      <div class="square">
-        <input type="button" id="btn9" class="butt" value="?">
-      </div>
-      <div id="J" class="square">
-        <input type="button" id="btn10" class="butt" value="?"> 
-        <div class="img"></div>
-      </div>
-      <div id="K" class="square">
-        <input type="button" id="btn11" class="butt" value="?">
-      </div>
-      <div id="L" class="square">
-        <input type="button" id="btn12" class="butt" value="?">
-      </div>
-      <div id="M" class="square">
-        <input type="button" id="btn13" class="butt" value="?">
-      </div>
-      <div id="N" class="square">
-        <input type="button" id="btn14" class="butt" value="?">
-      </div>
-      <div id="O" class="square">
-        <input type="button" id="btn15" class="butt" value="?">
-      </div>
-      <div id="P" class="square">
-        <input type="button" id="btn16" class="butt" value="?">
-      </div>
-    </div>
-    <div class="frame">
-      <div class="buttons"><button id="newgame">NEW GAME</button></div>
-      <div class="buttons"><button id="reset">RESET</button></div>
-    </div>
-    <footer>Made by Krzych 2018</footer>
+    <header class="main_header">
+      <a href="">
+        <h1><img src="" height="60" alt=""><span class="test">15-puzzle</span>
+        </h1>
+      </a>
+    </header>
+    <main>
+     <header class="info">General info</header>
+      <section class="game_description">
+       <h2>Game description</h2>
+        <p>The "15-puzzle" (or "16-puzzle" named, because of the number of spaces) is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing. The object of the puzzle is to place the tiles in order by making sliding vertical/horizontal moves that use the empty space.</p>
+        <p>The n-puzzle is a classical problem for modelling algorithms involving heuristics, which ensures optimality for certain search algorithms such as A*.</p>
+      </section>
+      <section class="history">
+       <h2>History</h2>
+        <p>The puzzle was "invented" by <i>Noyes Palmer Chapman</i> a postmaster in Canastota (New York), who is said to have shown friends, in 1874, a precursor puzzle consisting of 16 numbered blocks that were to be put together in rows of four, each summing to 34. Copies of the improved "Fifteen Puzzle" was started manufacturing in Hartford (Connecticut), by the students of the <i>American School for the Deafand</i>, by December 1879, and selling by them both locally and in Boston, Massachusetts. Shown one of these, <i>Matthias Rice</i>, who ran a fancy woodworking business in Boston, started manufacturing the puzzle sometime in December 1879 and convinced a "Yankee Notions" fancy goods dealer to sell them under the name of "Gem Puzzle". In late January 1880, <i>Dr. Charles Pevey</i>, a dentist in Worcester, garnered some attention by offering a cash reward for a solution to the "Fifteen Puzzle".</p>
+        <p>The game became a craze in the U.S. in February 1880, Canada in March, Europe in April, but popularity had ended instantly by July.</p>
+      </section>
+      <section class="game">
+        <div class="board">
+          <div class="square" id="num01">
+            <span>1</span>
+          </div>
+          <div class="square" id="num02">
+            <span>2</span>
+          </div>
+          <div class="square" id="num03">
+            <span>3</span>
+          </div>
+          <div class="square" id="num04">
+            <span>4</span>
+          </div>
+          <div class="square" id="num05">
+            <span>5</span>
+          </div>
+          <div class="square" id="num06">
+            <span>6</span>
+          </div>
+          <div class="square" id="num07">
+            <span>7</span>
+          </div>
+          <div class="square" id="num08">
+            <span>8</span>
+          </div>
+          <div class="square" id="num09">
+            <span>9</span>
+          </div>
+          <div class="square" id="num10">
+            <span>10</span>
+          </div>
+          <div class="square" id="num11">
+            <span>11</span>
+          </div>
+          <div class="square" id="num12">
+            <span>12</span>
+          </div>
+          <div class="square" id="num13">
+            <span>13</span>
+          </div>
+          <div class="square" id="num14">
+            <span>14</span>
+          </div>
+          <div class="square" id="num15">
+            <span>15</span>
+          </div>
+          <div class="square empty" id="num16">
+            <span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>Krzysztof Sobota 2019</span>
+    </footer>
   </div>
+  <script src="15_puzzle.js"></script>
 </body>
 </html>
