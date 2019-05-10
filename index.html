@@ -11,79 +11,122 @@
   <div class="container">
     <header class="main_header">
       <a href="">
-        <h1><img src="" height="60" alt=""><span class="test">15-puzzle</span>
+        <h1>
+          <img src="/15_puzzle(small).svg" height="60" alt=""><span class="test">15-puzzle</span>
         </h1>
       </a>
     </header>
     <main>
-     <header class="info">General info</header>
-      <section class="game_description">
-       <h2>Game description</h2>
-        <p>The "15-puzzle" (or "16-puzzle" named, because of the number of spaces) is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing. The object of the puzzle is to place the tiles in order by making sliding vertical/horizontal moves that use the empty space.</p>
-        <p>The n-puzzle is a classical problem for modelling algorithms involving heuristics, which ensures optimality for certain search algorithms such as A*.</p>
-      </section>
-      <section class="history">
-       <h2>History</h2>
-        <p>The puzzle was "invented" by <i>Noyes Palmer Chapman</i> a postmaster in Canastota (New York), who is said to have shown friends, in 1874, a precursor puzzle consisting of 16 numbered blocks that were to be put together in rows of four, each summing to 34. Copies of the improved "Fifteen Puzzle" was started manufacturing in Hartford (Connecticut), by the students of the <i>American School for the Deafand</i>, by December 1879, and selling by them both locally and in Boston, Massachusetts. Shown one of these, <i>Matthias Rice</i>, who ran a fancy woodworking business in Boston, started manufacturing the puzzle sometime in December 1879 and convinced a "Yankee Notions" fancy goods dealer to sell them under the name of "Gem Puzzle". In late January 1880, <i>Dr. Charles Pevey</i>, a dentist in Worcester, garnered some attention by offering a cash reward for a solution to the "Fifteen Puzzle".</p>
-        <p>The game became a craze in the U.S. in February 1880, Canada in March, Europe in April, but popularity had ended instantly by July.</p>
-      </section>
-      <section class="game">
-        <div class="board">
-          <div class="square" id="num01">
-            <span>1</span>
+      <article>
+        <header class="info">General info</header>
+        <section class="game_description">
+         <h2>Game description</h2>
+          <p>The <b>"15-puzzle"</b> (or <b>"16-puzzle"</b> named, because of the number of spaces) is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing. The object of the puzzle is to place the tiles in order by making sliding vertical/horizontal moves that use the empty space.</p>
+          <p>The <i>n-puzzle</i> is a classical problem for modelling algorithms involving heuristics, which ensures optimality for certain search algorithms such as A*.</p>
+        </section>
+        <section class="history">
+         <h2>History</h2>
+          <p>The puzzle was "invented" by <i>Noyes Palmer Chapman</i> a postmaster in Canastota (New York), who is said to have shown friends, in 1874, a precursor puzzle consisting of 16 numbered blocks that were to be put together in rows of four, each summing to 34. Copies of the improved "Fifteen Puzzle" was started manufacturing in Hartford (Connecticut), by the students of the <i>American School for the Deafand</i>, by December 1879, and selling by them both locally and in Boston, Massachusetts. Shown one of these, <i>Matthias Rice</i>, who ran a fancy woodworking business in Boston, started manufacturing the puzzle sometime in December 1879 and convinced a "Yankee Notions" fancy goods dealer to sell them under the name of "Gem Puzzle". In late January 1880, <i>Dr. Charles Pevey</i>, a dentist in Worcester, garnered some attention by offering a cash reward for a solution to the "Fifteen Puzzle".</p>
+          <p>The game became a craze in the U.S. in February 1880, Canada in March, Europe in April, but popularity had ended instantly by July.</p>
+        </section>
+        <section class="game">
+          <h2>Game</h2>
+          <div class="tables">
+            <h3></h3>
+            <table class="timer">
+            <tr>
+              <th>Your time</th>
+            </tr>
+            <tr>
+              <td id="time_now">00:00:00</td>
+            </tr>
+            <tr>
+              <td id="new_record">NEW RECORD !!!</td>
+            </tr>
+          </table>
+            <table class="record">
+              <tr>
+                <th colspan="2">Ranking table (record)</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td></td>
+              </tr>
+            </table>
           </div>
-          <div class="square" id="num02">
-            <span>2</span>
+          <div class="board">
+            <div class="square" id="num01">
+              <span>1</span>
+            </div>
+            <div class="square" id="num02">
+              <span>2</span>
+            </div>
+            <div class="square" id="num03">
+              <span>3</span>
+            </div>
+            <div class="square" id="num04">
+              <span>4</span>
+            </div>
+            <div class="square" id="num05">
+              <span>5</span>
+            </div>
+            <div class="square" id="num06">
+              <span>6</span>
+            </div>
+            <div class="square" id="num07">
+              <span>7</span>
+            </div>
+            <div class="square" id="num08">
+              <span>8</span>
+            </div>
+            <div class="square" id="num09">
+              <span>9</span>
+            </div>
+            <div class="square" id="num10">
+              <span>10</span>
+            </div>
+            <div class="square" id="num11">
+              <span>11</span>
+            </div>
+            <div class="square" id="num12">
+              <span>12</span>
+            </div>
+            <div class="square" id="num13">
+              <span>13</span>
+            </div>
+            <div class="square" id="num14">
+              <span>14</span>
+            </div>
+            <div class="square" id="num15">
+              <span>15</span>
+            </div>
+            <div class="square empty" id="num16">
+              <span></span>
+            </div>
           </div>
-          <div class="square" id="num03">
-            <span>3</span>
-          </div>
-          <div class="square" id="num04">
-            <span>4</span>
-          </div>
-          <div class="square" id="num05">
-            <span>5</span>
-          </div>
-          <div class="square" id="num06">
-            <span>6</span>
-          </div>
-          <div class="square" id="num07">
-            <span>7</span>
-          </div>
-          <div class="square" id="num08">
-            <span>8</span>
-          </div>
-          <div class="square" id="num09">
-            <span>9</span>
-          </div>
-          <div class="square" id="num10">
-            <span>10</span>
-          </div>
-          <div class="square" id="num11">
-            <span>11</span>
-          </div>
-          <div class="square" id="num12">
-            <span>12</span>
-          </div>
-          <div class="square" id="num13">
-            <span>13</span>
-          </div>
-          <div class="square" id="num14">
-            <span>14</span>
-          </div>
-          <div class="square" id="num15">
-            <span>15</span>
-          </div>
-          <div class="square empty" id="num16">
-            <span></span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </article>
     </main>
     <footer>
       <span>Krzysztof Sobota 2019</span>
     </footer>
   </div>
-  <script src="15_puzzle.js"></script>
+<script src="15_puzzle.js"></script>
 </body>
 </html>
