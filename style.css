@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #f7f0da;
+  background-color: hsl(55, 34%, 79%);
 }
 
 * {
@@ -22,6 +22,10 @@ h1 { font-size: 2em; margin: 5px 0;}
 h2 { font-size: 1.5em; margin: 5px 0;}
 h3 { font-size: 1.17em; margin: 5px 0;}
 
+h2, h3 {
+  color: #134d13;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -30,7 +34,7 @@ a {
 p {
   text-align: justify;
   text-indent: 1em;
-  line-height: 1.35em;
+  line-height: 1.5em;
   margin: 0.35em 0;
 }
 
@@ -72,41 +76,62 @@ a > h1 {
   justify-content: center;
   align-items: center;
   border-width: 0;
-  background-color: hsl(165, 40%, 50%);
-/*  background-color: hsl(214, 52%, 31%);*/
+  background-color: hsl(212, 12%, 31%);
 }
 
 .hide_show > span {
   font-size: 2em;
-  color: hsl(224, 51%, 95%);
+  color: hsl(60, 73%, 49%);
 }
 
 main {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   padding: 5px 15px;
   margin-bottom: 70px;
 }
 
-section {
+article, section {
   display: flex;
   flex-flow: row wrap;
+  padding: 10px;
 }
 
-.info { font-size: 2em; margin: 5px 0;}
+aside {
+  flex-basis: 210px;
+  padding: 8px 12px;
+  order: 1;
+  color: hsl(240, 59%, 98%);
+  background-color: hsl(212, 12%, 31%);
+}
+
+aside h3 {
+  line-height: 1.5em;
+  color: hsl(60, 89%, 59%); 
+}
+
+.about_game {
+  flex: 75%;
+}
 
 .game {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 25px;
+  order: 2;
 }
 
 .tables {
   flex-basis: 280px;
   height: auto;
   padding: 10px;
-  background-color: hsl(52, 37%, 60%);
+  border: 2px solid hsl(55, 34%, 40%);
+  background-color: hsl(55, 34%, 51%); 
+}
+
+.tables h3 {
+  text-align: center;
+  line-height: 2em;
+  color: hsl(0, 68%, 48%);
+  background-image: linear-gradient(to bottom, hsl(55, 34%, 56%) 0%, hsl(55, 35%, 82%) 50%, hsl(55, 34%, 56%) 100%);
 }
 
 .tables, .board {
@@ -115,27 +140,26 @@ section {
 
 table {
   width: 100%;
-  margin: 15px auto;
+  margin: 20px auto;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 1.4em;
 }
 
 th {
-  height: 40px;
+  height: 45px;
   font-size: 18px;
-  padding: 5px 0;
 }
 
 td {
-  height: 30px;
+  height: 32px;
   font-size: 18px;
-  background-color: transparent;
-  border: 1px solid black;  
+  border: thin solid hsl(55, 34%, 31%);  
+  background-color: hsl(46, 64%, 82%);
 }
 
-.timer {  
-  height: 120px;
+.timer, .record {  
+  height: auto;
 }
 
 .timer > tbody > tr:first-of-type {
@@ -168,6 +192,7 @@ td {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin: 0 auto;
   border: 6px outset hsl(65, 62%, 46%);
 }
 
@@ -184,14 +209,13 @@ td {
   display: flex;
   align-self: center;
   font-size: 2.25em;
-  color: hsl(217, 38%, 89%);
+  color: hsl(217, 38%, 92%);
 }
 
 .empty {
   border: 1px solid hsl(46, 38%, 19%);
-  background-color: hsl(46, 61%, 88%);
+  background-color: hsl(46, 61%, 92%);
 }
-
 
 .buttons {
   display: flex;
@@ -202,20 +226,20 @@ td {
 }
 
 .buttons > button {
-  width: 45%;
+  width: 35%;
   height: 100%;
-  margin: 0 5px;
-  border: 2px solid #729d31;
+  margin: 0 10px;
+  border: 4px solid hsl(65, 62%, 46%);
   font-size: 28px;
-  background-color: #DDDBD5;
+  color: #e8e8e8;  
 }
 
 .buttons > button:first-of-type {
-  color: #131440;
+  background-color: #131440;
 }
 
 .buttons > button:last-of-type {
-  color: #801721;
+  background-color: #801721;
 }
 
 footer {
