@@ -1,65 +1,57 @@
-'use strict';
+'use strict'
 
-window.addEventListener('DOMContentLoaded', numbers);
-
-function numbers() {
-  let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, ];
+function Puzzle() {
+  let boardNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  let numbersArray = [1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 2.4, 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 4.3, 4.4];
   
-  let shake = (numberArray, renew) => {
+  let shake = (boardNumbers, renew) => {
     let tempArray = [];    
-      for (let i = 1; i <= 16; i++) {      
-        let indexNumber = Math.floor(Math.random() * numberArray.length);
-        let squareNumber = numberArray[indexNumber];
-
+      for (let i = 1; i <= 15; i++) {
+        
+      // random index number from 'boardNumbers' array
+        let indexNumber = Math.round(Math.random() * (boardNumbers.length - 1));
+      
+      // get digit from index position
+        let squareNumber = boardNumbers[indexNumber]; 
         tempArray.push(squareNumber);
-        
-        if (typeof squareNumber === "number") {
-          document.getElementById(`btn${i}`).value = squareNumber;
-        } 
-        else {         document.getElementById(`btn${i}`).style.color = "transparent";
-        }
-        
-        numberArray.splice(indexNumber, 1, numberArray[numberArray.length-1]);
-        numberArray.pop();
+        boardNumbers.splice(indexNumber, 1);      
+      
+      // insert numbers into the board
+       document.querySelector(`#num${i}`).textContent = squareNumber;
       }
-    
-    if (renew = true) {
-      let resetArray = [];
-      resetArray === tempArray;
-      return resetArray;
-    }
     
     return tempArray;    
   }
   
-  let newGame = document.getElementById("newgame");
-  let reset = document.getElementById("reset");
   
-  let rewrite = shake(numberArray, true);
   
-  newGame.addEventListener("click", function(numberArray, renew) {
-    renew = false;
-    shake(numberArray, renew);
-  });
+  let reset = document.querySelector('#reset');
+    
+  let rewrite = shake(boardNumbers, true);
+  reset.addEventListener("click", rewrite);
   
-  reset.addEventListener("click", rewrite);  
-} 
+  return rewrite;
+}
 
-let swap = (btnNumber) => {
+let newGame = document.querySelector('#play');  
+  newGame.addEventListener("click", Puzzle);
+  
+/*let swap = (btnNumber) => {
   if (id.value) {
     
   }
   
-};
+};*/
 
-let clicked = document.getElementsByClassName("butt");
+let clicked = document.querySelector('#puzzle');
 
 clicked.addEventListener("click", function(e) {
   let btnNumber = e.target.id;
-  swap(btnNumber);
+  alert(btnNumber);
 });
 
-  /*function howManyPermutations(param) {
+  /*function howManyPermutations(param, tempArray) {
+    Puzzle();
     let purity = 0;
     for (let j = 0; j <= 13; j++) // you can't use j=14 index to make next pair - it's the last one!
     {
