@@ -36,7 +36,7 @@ p {
   text-align: justify;
   text-indent: 1em;
   line-height: 1.5em;
-  margin: 0.35em 0;
+  margin: 0.25em 0;
 }
 
 .main-header {
@@ -64,7 +64,11 @@ a > h1 {
   flex-flow: row nowrap;
 }
 
-.test {
+h1 > img {
+  height: 100%;
+}
+
+.game-name {
   padding-left: 20px;
   margin-bottom: 9px;
   font-size: 80px;
@@ -94,24 +98,35 @@ main {
   margin-bottom: 70px;
 }
 
-article, section {
+article, section, aside, .tables {
   flex-flow: row wrap;
   padding: 10px;
 }
 
 aside {
   flex-basis: 25%;
-  padding: 10px 12px;
+  height: auto;
   margin: 5px;
   color: hsl(240, 59%, 98%);
   background-color: hsl(212, 12%, 31%);
 }
 
 aside h3 {
+  padding: 5px 0;
+  margin: 0;
   color: hsl(60, 89%, 59%); 
 }
 
-.about-game {
+aside > img {
+  width: 100%;
+  padding: 5px 0;
+}
+
+aside > a {
+  color: hsl(99, 79%, 61%);  
+}
+
+.game {
   flex: 1 0 65%;
 }
 
@@ -120,9 +135,8 @@ aside h3 {
 }
 
 .tables {
-  flex-basis: 280px;
+  flex-basis: 270px;
   height: auto;
-  padding: 10px;
   border: 2px solid hsl(55, 34%, 40%);
   background-color: hsl(55, 34%, 51%); 
 }
@@ -178,7 +192,7 @@ td {
 
 .board {
   height: 400px;
-  width: 400px;
+  width: 360px;
   align-self: center;
 }
 
@@ -256,47 +270,214 @@ footer > span {
   font-style: italic;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 560px) and (max-width: 919px) {
+  body, html {
+    font-size: 14px;
+  }
+  
+  .container {
+    width: 100%;
+  }
+    
+  .main-header {
+    height: 100px;
+  }
+      
+  .game-name {    
+    padding-left: 10px;
+    font-size: 70px;    
+  }
+    
+  .about-game {
+    order: 1;
+  }
+  
+  .game {
+    width: 100%;
+    min-height: 450px;
+    flex-flow: row wrap;
+    order: 3;
+  }
+
+  .game > p {
+    padding-bottom: 10px;
+  }  
+    
+  aside {
+    flex: 0 1 95%;
+    margin: 5px auto;
+    order: 2;
+  }
+
+  aside h3, .tables h3 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tables {
+    flex: 1;
+  }
+
+  .tables h3, table {
+    padding: 5px 0;
+  }
+
+  .tables h3 {
+    line-height: 1.3em;
+    font-size: 18px;
+  }
+    
+  th {
+    height: 36px;
+    font-size: 18px;
+  }
+
+  td {
+    height: 28px;
+    font-size: 16px;
+  }
+  
+  .board {
+    width: 320px;
+    height: 320px;
+  }
+
+  .puzzle {
+    width: 300px;
+    height: 300px;    
+  }
+    
+  .buttons {
+    margin: 10px 0;
+  }
+
+  .buttons > button {
+    font-size: 24px;
+  }
+
+  .buttons > button:hover { 
+    border-width: 5px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
   body, html {
     font-size: 12px;
   }
   
-  h1 { font-size: 1.75em;}
-  h2 { font-size: 1.5em;}
-  h3 { font-size: 1.25em;}
-
+  .container {
+    width: 100%;
+  }
+    
   .main-header {
-    height: 75px;
+    height: 80px;
   }
 
   a > h1 {
-    height: 40px;
+    height: 45px;
+  }
+    
+  .game-name {
+    padding-left: 5px;
+    font-size: 50px;
   }
   
-  h1 > img {
-    height: 40px;
+  .hide-show {
+    height: 3em;
   }
-  
-  .test {
-    padding-left: 10px;
-    margin-bottom: 5px;
-    font-size: 2em;
+
+  .hide-show > span {
+    font-size: 1.5em;
   }
 
   main {
     margin-bottom: 60px;
   }
   
-  .board {
+  .about-game {
+    order: 1;
+  }
+  
+  .game {
+    width: 100%;
+    flex-flow: row wrap;
+    order: 3;
+  }
+
+  .game > p {
+    padding-bottom: 10px;
+  }
+  
+  aside, .tables {
+    flex: 0 1 95%;
+    margin: 5px auto;
+  }
+  
+  aside {
+    height: auto;
+    order: 2;
+  }
+
+  aside h3, .tables h3 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tables {
+    height: 360px;
+    order: 4;
+  }
+
+  .tables h3, table {
+    width: 100%;
+  }
+
+  .tables h3 {
+    line-height: 2em;
+    font-size: 20px;
+  }
     
+  th {
+    height: 34px;
+    font-size: 18px;
+  }
+
+  td {
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .record td:first-child {
+    width: 10%;
+  }
+  
+  .board {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px auto;
+    order: 3;
   }
 
   .puzzle {
     width: 250px;
     height: 250px;    
   }
-  
-  .square > span {
-    font-size: 32px;
+    
+  .buttons {
+    margin: 10px 0;
   }
+
+  .buttons > button {
+    font-size: 24px;
+  }
+
+  .buttons > button:hover { 
+    border-width: 5px;
+    font-size: 20px;
+  }
+
+  footer {
+    height: 50px;
+  }  
 }
